@@ -37,43 +37,6 @@ class MyApp extends StatelessWidget{
             leading: new Icon(Icons.account_box,color: Colors.lightBlue,),
           ),
           new Divider(),
-          ListTile(
-            title:new Text('河南省濮阳市百姓办公楼',style: TextStyle(fontWeight: FontWeight.w500),),
-            subtitle: new Text('JSPang:1513938888'),
-            leading: new Icon(Icons.account_box,color: Colors.lightBlue,),
-          ),
-          new Divider(),
-          ListTile(
-            title:new Text('河南省濮阳市百姓办公楼',style: TextStyle(fontWeight: FontWeight.w500),),
-            subtitle: new Text('JSPang:1513938888'),
-            leading: new Icon(Icons.account_box,color: Colors.lightBlue,),
-          ),
-          new Divider(),
-          ListTile(
-            title:new Text('河南省濮阳市百姓办公楼',style: TextStyle(fontWeight: FontWeight.w500),),
-            subtitle: new Text('JSPang:1513938888'),
-            leading: new Icon(Icons.account_box,color: Colors.lightBlue,),
-          ),
-          new Divider(),
-          ListTile(
-            title:new Text('河南省濮阳市百姓办公楼',style: TextStyle(fontWeight: FontWeight.w500),),
-            subtitle: new Text('JSPang:1513938888'),
-            leading: new Icon(Icons.account_box,color: Colors.lightBlue,),
-          ),
-          new Divider(),
-          ListTile(
-            title:new Text('河南省濮阳市百姓办公楼',style: TextStyle(fontWeight: FontWeight.w500),),
-            subtitle: new Text('JSPang:1513938888'),
-            leading: new Icon(Icons.account_box,color: Colors.lightBlue,),
-          ),
-          new Divider(),
-          ListTile(
-            title:new Text('河南省濮阳市百姓办公楼',style: TextStyle(fontWeight: FontWeight.w500),),
-            subtitle: new Text('JSPang:1513938888'),
-            leading: new Icon(Icons.account_box,color: Colors.lightBlue,),
-          ),
-          new Divider(),
-
         ],
       ),
 
