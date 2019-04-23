@@ -4,36 +4,24 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
+  Widget build(BuildContext context ){
     return MaterialApp(
-        title: 'Welcome to Flutter',
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text('TextWidget'),
-          ),
-          body: Center(
-            child: Container(
-              child: new Text(
-                "Hello World",
-                style: TextStyle(fontSize: 40.0),
-              ),
-              alignment: Alignment.center,
-              width: 500,
-              height: 400,
-              padding: const EdgeInsets.fromLTRB(10, 20, 30, 40),
-              margin: const EdgeInsets.fromLTRB(10, 20, 30, 40),
-              decoration: new BoxDecoration(
-                gradient: const LinearGradient(
-                    colors: [
-                      Colors.greenAccent,
-                      Colors.purple,
-                      Colors.red,
-                    ]
-                )
-              ),
+      title:'Text widget',
+      home:Scaffold(
+        body:Center(
+          child:Container(
+            child:new Image.network(
+              'https://www.baidu.com/img/bd_logo1.png?where=super',
+              scale:1.0,
+              fit: BoxFit.scaleDown,
+              repeat: ImageRepeat.repeat,
             ),
+            width:300.0,
+            height:200.0,
+            color: Colors.lightBlue,
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
