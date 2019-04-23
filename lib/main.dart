@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget{
             ),
             padding: EdgeInsets.fromLTRB(20, 40, 20, 0),
             children: <Widget>[
+
               new Image.network('http://img5.mtime.cn/mt/2018/10/22/104316.77318635_180X260X4.jpg',fit: BoxFit.cover),
               new Image.network('http://img5.mtime.cn/mt/2018/10/10/112514.30587089_180X260X4.jpg',fit: BoxFit.cover),
               new Image.network('http://img5.mtime.cn/mt/2018/11/13/093605.61422332_180X260X4.jpg',fit: BoxFit.cover),
