@@ -9,32 +9,15 @@ class MyApp extends StatelessWidget{
 
       home:Scaffold(
           appBar:new AppBar(
-            title:new Text('水平方向布局'),
+            title:new Text('垂直方向布局'),
           ),
-          body:new Row(
+          body:Column(
             children: <Widget>[
-              new RaisedButton(
-                  onPressed: (){
-                  },
-                  color:Colors.redAccent,
-                  child:new Text('红色按钮')
-              ),
-              Expanded(child:new RaisedButton(
-                onPressed: (){
-                },
-                color:Colors.orangeAccent,
-                child: new Text('黄色按钮'),
-              )
-
-              ),
-              new RaisedButton(
-                  onPressed: (){
-                  },
-                  color:Colors.pinkAccent,
-                  child:new Text('粉色按钮')
-              )
-
+              Text('I am JSPang'),
+              Text('my website is jspang.com'),
+              Text('I love coding')
             ],
+            crossAxisAlignment: CrossAxisAlignment.start,
           )
       ),
     );
