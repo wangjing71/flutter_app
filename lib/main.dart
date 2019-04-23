@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//传递的数据结构,也可以理解为对商品数据的抽象
+//传递的数据结构,也可以理解为对商品数据的抽象 1
 class Product{
   final String title;  //商品标题
   final String description;  //商品描述
