@@ -1,29 +1,24 @@
 import 'package:flutter/material.dart';
-void main () => runApp(MyApp(
-    items: new List<String>.generate(31, (i)=> "我是第 $i 个条目哦")
-));
+void main () => runApp(MyApp());
 
 class MyApp extends StatelessWidget{
-
-  final List<String> items;
-
-  MyApp({Key key, @required this.items}):super(key:key);
-
   @override
   Widget build(BuildContext context ){
     return MaterialApp(
       title:'ListView widget',
       home:Scaffold(
-          body:new ListView.builder(
-              itemCount:items.length,
-              itemBuilder:(context,index){
-                return new ListTile(
-                  title:Container(
-                    child:new Text('${items[index]}',style: TextStyle(fontSize: 20.0),),
-                    alignment: Alignment.center,
-                  )
-                );
-              }
+          body:GridView.count(
+            padding:const EdgeInsets.all(20.0),
+            crossAxisSpacing: 10.0,
+            crossAxisCount: 3,
+            children: <Widget>[
+              const Text('I am Jspang'),
+              const Text('I love Web'),
+              const Text('jspang.com'),
+              const Text('我喜欢玩游戏'),
+              const Text('我喜欢看书'),
+              const Text('我喜欢吃火锅')
+            ],
           )
       ),
     );
