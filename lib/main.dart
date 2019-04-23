@@ -11,12 +11,17 @@ class FirstScreen extends StatelessWidget{
         appBar: AppBar(title:Text('导航页面')),
         body:Center(
             child:RaisedButton(
-              child:Text('查看商品详情页面'),
-              onPressed: (){
-                Navigator.push(context,new  MaterialPageRoute(
-                    builder:(context) =>new SecondScreen())
-                );
-              },
+              child:Container(
+                child: new Text('查看商铺1'),
+              ),
+//              onPressed: (){
+//                Navigator.push(context,new  MaterialPageRoute(
+//                    builder:(context) =>new SecondScreen())
+//                );
+//              },
+            onPressed: (){
+                Navigator.push(context, new MaterialPageRoute(builder: (context)=>new SecondScreen()));
+            },
             )
         )
     );
