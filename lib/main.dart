@@ -24,7 +24,7 @@ class ProductList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title:Text('商品列表')),
+        appBar: AppBar(title:Text('商品列表22')),
         body:ListView.builder(
           itemCount:products.length,
           itemBuilder: (context,index){
