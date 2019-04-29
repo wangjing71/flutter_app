@@ -12,7 +12,7 @@ void main(){
       title:'数据传递案例',
       home:ProductList(
         products:List.generate(
-            20, (i)=>Product('商品 $i','这是一个商品详情，编号为:$i')
+            50, (i)=>Product('商品 $i','这是一个商品详情，编号为:$i')
         ),
       )
   ));
@@ -48,7 +48,6 @@ class ProductList extends StatelessWidget{
 class ProductDetail extends StatelessWidget {
   final Product product;
   ProductDetail({Key key ,@required this.product}):super(key:key);
-
 
   @override
   Widget build(BuildContext context) {
