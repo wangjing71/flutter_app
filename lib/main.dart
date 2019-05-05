@@ -20,7 +20,12 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Center(
-          child: Text('Hellow Word'),
+          child: new RaisedButton(
+            onPressed: (){
+              
+            },
+            child: new Text('点击了按钮'),
+          )
         ),
       ),
     );
