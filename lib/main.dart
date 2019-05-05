@@ -20,11 +20,25 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
+          child: Container(
+            width: 200,
+            height: 200,
+            decoration: BoxDecoration(
+              color: Colors.red,
+              border: new Border.all(
+                color: Colors.grey,
+                width: 8.0,
+              ),
+              borderRadius:
+                const BorderRadius.all(const Radius.circular(8.0)),
+
+            ),
+            child: Text(
+              'Flutter',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 28.0),
+            ),
+
           )
         ),
       ),
