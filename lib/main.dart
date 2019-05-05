@@ -33,12 +33,14 @@ class MyApp extends StatelessWidget {
                 const BorderRadius.all(const Radius.circular(8.0)),
 
             ),
-            child: Text(
-              'Flutter',
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 28.0),
-            ),
 
+            child: Center(
+              child: Text(
+                'Flutter',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 28.0),
+              ),
+            ),
           )
         ),
       ),
