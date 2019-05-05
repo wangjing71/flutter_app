@@ -13,20 +13,79 @@ class MyApp extends StatelessWidget {
       title: 'flutter demo',
       theme: ThemeData(
           brightness: Brightness.light, // 应用 序整体主题的亮度
-          primaryColor: Colors.lightGreen[600], // App 主要部分的背景色
+          primaryColor: Colors.blue[600], // App 主要部分的背景色
           accentColor: Colors.orange[600]), //前景色（文本、按钮等）
       home: Scaffold(
         appBar: AppBar(
           title: Text('Welcome to flutter'),
         ),
-        body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
-        ),
+        body: new ListView(
+          children: <Widget>[
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+            ListTile(
+              leading: Icon(Icons.alarm),
+              title: Text('Alarm'),
+            ),
+
+
+
+          ],
+        )
       ),
     );
   }
