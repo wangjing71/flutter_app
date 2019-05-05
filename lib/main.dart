@@ -19,73 +19,54 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Welcome to flutter'),
         ),
-        body: new ListView(
+//        body: new ListView(
+//          children: <Widget>[
+//            ListTile(
+//              leading: Icon(Icons.alarm),
+//              title: Text('Alarm'),
+//            ),
+//            ListTile(
+//              leading: Icon(Icons.alarm),
+//              title: Text('Alarm'),
+//            ),
+//          ],
+//        )
+
+      body: Container(
+        height: 200.0,
+        child: new ListView(
+          scrollDirection: Axis.horizontal,
           children: <Widget>[
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
+            Container(
+              width: 160.0,
+              color: Colors.lightGreen,
             ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
+            Container(
+              width: 160.0,
+              color: Colors.red,
             ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
+            Container(
+              width: 160.0,
+              color: Colors.purple,
             ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
+            Container(
+              width: 160.0,
+              color: Colors.lightGreen,
             ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
+            Container(
+              width: 160.0,
+              color: Colors.red,
             ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
+            Container(
+              width: 160.0,
+              color: Colors.purple,
             ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
-            ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
-            ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
-            ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
-            ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
-            ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
-            ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
-            ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
-            ),
-            ListTile(
-              leading: Icon(Icons.alarm),
-              title: Text('Alarm'),
-            ),
-
-
 
           ],
-        )
+        ),
+      )
+
+
       ),
     );
   }
