@@ -26,6 +26,32 @@ class MyApp extends StatelessWidget {
             child: new Text('点击了按钮'),
           )
         ),
+        drawer: Drawer(
+          child: ListView(
+            children: <Widget>[
+              ListTile(
+                leading: CircleAvatar(child: Icon(Icons.color_lens)),
+                title: Text('个性装扮'),
+              ),
+              ListTile(
+                leading: CircleAvatar(child: Icon(Icons.color_lens)),
+                title: Text('个性装扮'),
+              ),
+              ListTile(
+                leading: CircleAvatar(child: Icon(Icons.color_lens)),
+                title: Text('个性装扮'),
+              ),
+              ListTile(
+                leading: CircleAvatar(child: Icon(Icons.color_lens)),
+                title: Text('个性装扮'),
+              ),
+
+
+            ],
+          ),
+
+        ),
+
       ),
     );
   }
