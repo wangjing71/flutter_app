@@ -44,9 +44,9 @@ class MyApp extends StatelessWidget {
             actions: <Widget>[
               FlatButton(onPressed: null, child: Text('确定',style: TextStyle(color: Colors.blue),)),
               FlatButton(onPressed: null, child: Text('取消',style: TextStyle(color: Colors.blue))),
-
             ],
           ),
+
         ),
       ),
     );
