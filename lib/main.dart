@@ -8,7 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       title: 'flutter demo',
       theme: ThemeData(
@@ -19,13 +18,28 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
+            child: new RaisedButton(
+          onPressed: () {},
+          child: new Text('点击了按钮'),
+        )),
+        floatingActionButton: Builder(builder: (BuildContext context) {
+          return FloatingActionButton(
+            onPressed: () {
+              Scaffold.of(context).showSnackBar(
+                  SnackBar(content: Text('你点击了FloatingActionButton'),));
             },
-            child: new Text('点击了按钮'),
-          )
-        ),
+            mini: false,
+            shape: new CircleBorder(),
+            isExtended: false,
+            child: const Icon(Icons.add),
+            tooltip: '请点击FloatingActionButton',
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.blue,
+            elevation: 7.0,
+            highlightElevation: 14.0,
+          );
+        }),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }
