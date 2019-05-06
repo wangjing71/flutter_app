@@ -18,13 +18,25 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Welcome to flutter'),
         ),
-        body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
+        body: Container(
+          color: Colors.green,
+          width: 100.0,
+          height: 100.0,
+          padding: EdgeInsets.all(5.0),
+          child: OverflowBox(
+            alignment: Alignment.topLeft,
+            maxHeight: 300.0,
+            maxWidth:  300.0,
+
+            child: Container(
+              color: Colors.blueGrey,
+              width: 250.0,
+              height: 300.0,
+            ),
+
+          ),
+
+
         ),
       ),
     );
