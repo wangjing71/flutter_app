@@ -8,25 +8,30 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-      title: 'flutter demo',
+      title: 'Scaffold脚手架组件',
       theme: ThemeData(
-          brightness: Brightness.light, // 应用 序整体主题的亮度
-          primaryColor: Colors.lightGreen[600], // App 主要部分的背景色
-          accentColor: Colors.orange[600]), //前景色（文本、按钮等）
+        primarySwatch: Colors.blue,
+      ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to flutter'),
+          title: Text('Scaffold脚手架组件'),
         ),
         body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
+          child: Text('Scaffold'),
         ),
+        bottomNavigationBar: BottomAppBar(
+          child: Container(
+            height: 50.0,
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          tooltip: '增加',
+          child: Icon(Icons.add),
+        ),
+
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
     );
   }
