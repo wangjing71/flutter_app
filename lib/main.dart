@@ -19,14 +19,30 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
+          child: MyButton(),
         ),
       ),
     );
   }
 }
+
+class MyButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: (){
+
+      },
+      child: Container(
+        padding: EdgeInsets.all(12.0),
+        decoration: BoxDecoration(
+          color: Theme.of(context).buttonColor,
+          borderRadius: BorderRadius.circular(10.0)
+        ),
+        child: Text('测试按钮'),
+      ),
+
+    );
+  }
+}
+
