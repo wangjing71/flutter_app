@@ -56,7 +56,6 @@ class MyApp extends StatelessWidget {
       );
     };
 
-
     Widget buttonContainer = Container(
       padding: EdgeInsets.all(16.0),
       child: Row(
@@ -66,8 +65,6 @@ class MyApp extends StatelessWidget {
           buildButtonColun(Icons.near_me,"导航"),
           buildButtonColun(Icons.share,"分享")
         ],
-
-
       ),
     );
 
