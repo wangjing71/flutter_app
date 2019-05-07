@@ -18,8 +18,57 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Container(
-          decoration: new BoxDecoration(
-            color: Colors.grey
+          //添加装饰效果
+          decoration: BoxDecoration(color: Colors.grey //类似背景颜色
+              ),
+
+          child: Column(
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Expanded(
+                      child: Container(
+                    width: 150.0,
+                    height: 150.0,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 10.0, color: Colors.blueGrey),
+                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                    margin: EdgeInsets.all(4.0),
+                  )),
+                  Expanded(
+                      child: Container(
+                    width: 150.0,
+                    height: 150.0,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 10.0, color: Colors.blueGrey),
+                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                    margin: EdgeInsets.all(4.0),
+                  )),
+                ],
+              ),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                      child: Container(
+                        width: 150.0,
+                        height: 150.0,
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 10.0, color: Colors.blueGrey),
+                            borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                        margin: EdgeInsets.all(4.0),
+                      )),
+                  Expanded(
+                      child: Container(
+                        width: 150.0,
+                        height: 150.0,
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 10.0, color: Colors.blueGrey),
+                            borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                        margin: EdgeInsets.all(4.0),
+                      )),
+                ],
+              ),
+            ],
           ),
         ),
 
