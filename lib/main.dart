@@ -18,31 +18,34 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Center(
-            child: Row(
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                color: Colors.red,
-                padding: EdgeInsets.all(5.0),
-              ),
-              flex: 1,
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.yellow,
-                padding: EdgeInsets.all(5.0),
-              ),
-              flex: 2,
-            ),
-            Expanded(
-              child: Container(
-                color: Colors.blue,
-                padding: EdgeInsets.all(5.0),
-              ),
-              flex: 1,
-            ),
-          ],
-        )),
+          child: Container(
+              width: 200,
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      color: Colors.red,
+                      padding: EdgeInsets.all(5.0),
+                    ),
+                    flex: 1,
+                  ),
+                  Expanded(
+                    child: Container(
+                      color: Colors.yellow,
+                      padding: EdgeInsets.all(5.0),
+                    ),
+                    flex: 1,
+                  ),
+                  Expanded(
+                    child: Container(
+                      color: Colors.blue,
+                      padding: EdgeInsets.all(5.0),
+                    ),
+                    flex: 1,
+                  ),
+                ],
+              )),
+        ),
       ),
     );
   }
