@@ -8,7 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       title: 'flutter demo',
       theme: ThemeData(
@@ -18,13 +17,11 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Welcome to flutter'),
         ),
-        body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
+        body: Container(
+          height: 200.0,
+          child: AspectRatio(aspectRatio: 1.5, child: Container(
+            color: Colors.green,
+          )),
         ),
       ),
     );
