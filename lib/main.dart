@@ -8,25 +8,25 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       title: 'flutter demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        primaryColor: Colors.lightGreen[600],
+        accentColor: Colors.orange[600]
       ), //前景色（文本、按钮等）
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to flutter'),
-        ),
-        body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
-        ),
-      ),
+          appBar: AppBar(
+            title: Text('武当山风景区'),
+          ),
+          body: ListView(
+            children: <Widget>[
+              Image.asset('images/wudang.jpeg',)
+
+
+
+            ],
+          )),
     );
   }
 }
