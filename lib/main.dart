@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-              width: 250,
+//              width: 250,
               child: Row(
                 children: <Widget>[
                   Expanded(
@@ -39,6 +39,20 @@ class MyApp extends StatelessWidget {
                   Expanded(
                     child: Container(
                       color: Colors.blue,
+                      padding: EdgeInsets.all(5.0),
+                    ),
+                    flex: 1,
+                  ),
+                  Expanded(
+                    child: Container(
+                      color: Colors.purple,
+                      padding: EdgeInsets.all(5.0),
+                    ),
+                    flex: 1,
+                  ),
+                  Expanded(
+                    child: Container(
+                      color: Colors.greenAccent,
                       padding: EdgeInsets.all(5.0),
                     ),
                     flex: 1,
