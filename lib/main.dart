@@ -36,8 +36,39 @@ class MyApp extends StatelessWidget {
       ),
     );
 
-    Widget abuttonContainer = Container(
+    Column buildButtonColun(IconData icon,String laber){
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Icon(icon,color: Colors.lightGreen[600]),
+          Container(
+            child: Text(
+                laber,
+              style: TextStyle(
+                fontSize: 12.0,
+                fontWeight: FontWeight.w400,
+                color: Colors.lightGreen[600]
+              ),
+            ),
+          )
+        ],
+      );
+    };
+
+
+    Widget buttonContainer = Container(
       padding: EdgeInsets.all(16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          buildButtonColun(Icons.call,"电话"),
+          buildButtonColun(Icons.near_me,"导航"),
+          buildButtonColun(Icons.share,"分享")
+        ],
+
+
+      ),
     );
 
     Widget textContainer = Container(
@@ -73,7 +104,7 @@ class MyApp extends StatelessWidget {
                 height: 240,
               ),
               addressContainer,
-              abuttonContainer,
+              buttonContainer,
               textContainer
             ],
           )),
