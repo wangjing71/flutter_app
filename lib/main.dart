@@ -52,11 +52,7 @@ class MyApp extends StatelessWidget {
               width: 100,
               color: Colors.pink,
             ),
-
-
           ],
-
-
         )
       ),
     );
