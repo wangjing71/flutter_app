@@ -19,11 +19,15 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
+          child: SizedBox(
+            width: 200.0,
+            height:200.0,
+            child: Card(
+              child: Text('SizedBox'),
+
+
+            ),
+
           )
         ),
       ),
