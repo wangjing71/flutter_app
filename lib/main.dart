@@ -8,7 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       title: 'flutter demo',
       theme: ThemeData(
@@ -19,10 +18,10 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Center(
-          child: new Container(
-            color: Colors.red,
-            width: 300.0,
-            height: 300.0,
+            child: new Container(
+          color: Colors.red,
+          width: 300.0,
+          height: 300.0,
 
             child: FractionallySizedBox(
               alignment: Alignment.topLeft,
@@ -31,11 +30,8 @@ class MyApp extends StatelessWidget {
               child: Container(
                 color: Colors.purple,
               ),
-
             ),
-
-          )
-        ),
+        )),
       ),
     );
   }
