@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Container(
-
-
-
+          decoration: new BoxDecoration(
+            color: Colors.grey
+          ),
         ),
 
 //        body: Center(
