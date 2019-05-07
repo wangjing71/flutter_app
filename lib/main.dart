@@ -8,7 +8,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       title: 'flutter demo',
       theme: ThemeData(
@@ -19,13 +18,31 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
-        ),
+            child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Container(
+                color: Colors.red,
+                padding: EdgeInsets.all(5.0),
+              ),
+              flex: 1,
+            ),
+            Expanded(
+              child: Container(
+                color: Colors.yellow,
+                padding: EdgeInsets.all(5.0),
+              ),
+              flex: 2,
+            ),
+            Expanded(
+              child: Container(
+                color: Colors.blue,
+                padding: EdgeInsets.all(5.0),
+              ),
+              flex: 1,
+            ),
+          ],
+        )),
       ),
     );
   }
