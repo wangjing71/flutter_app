@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-              width: 200,
+              width: 250,
               child: Row(
                 children: <Widget>[
                   Expanded(
