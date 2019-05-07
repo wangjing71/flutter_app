@@ -19,11 +19,21 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to flutter'),
         ),
         body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
+          child: new Container(
+            color: Colors.red,
+            width: 300.0,
+            height: 300.0,
+
+            child: FractionallySizedBox(
+              alignment: Alignment.topLeft,
+              widthFactor: 0.5,
+              heightFactor:1.5,
+              child: Container(
+                color: Colors.purple,
+              ),
+
+            ),
+
           )
         ),
       ),
