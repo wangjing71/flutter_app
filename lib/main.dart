@@ -31,7 +31,8 @@ class MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-
+        final snackBar = SnackBar(content: Text('您已按下'));
+        Scaffold.of(context).showSnackBar(snackBar);
       },
       child: Container(
         padding: EdgeInsets.all(12.0),
