@@ -8,8 +8,38 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget addressContainer = Container();
-    Widget abuttonContainer = Container();
+    Widget addressContainer = Container(
+      padding: EdgeInsets.all(16.0),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                child: Text(
+                  '风景区地址',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+                padding: EdgeInsets.only(bottom: 8.0),
+              ),
+              Text(
+                '湖北省十堪市丹江口市',
+                style: TextStyle(color: Colors.grey[500]),
+              )
+            ],
+          )),
+          Icon(Icons.star,color: Colors.red[500]),
+          Text('66')
+
+        ],
+      ),
+    );
+
+    Widget abuttonContainer = Container(
+      padding: EdgeInsets.all(16.0),
+    );
+
     Widget textContainer = Container(
       padding: EdgeInsets.all(16.0),
       child: Text(
