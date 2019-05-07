@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             width: 200.0,
             height:200.0,
             child: Card(
-              child: Text('SizedBox'),
+              child: Text('SizedBox',style: TextStyle(fontSize: 25.0),),
 
 
             ),
