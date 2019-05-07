@@ -33,6 +33,7 @@ class MyApp extends StatelessWidget {
                     decoration: BoxDecoration(
                         border: Border.all(width: 10.0, color: Colors.blueGrey),
                         borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                    child: Image.asset('images/splash1.png'),
                     margin: EdgeInsets.all(4.0),
                   )),
                   Expanded(
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
                         border: Border.all(width: 10.0, color: Colors.blueGrey),
                         borderRadius: BorderRadius.all(Radius.circular(8.0))),
                     margin: EdgeInsets.all(4.0),
+                    child: Image.asset('images/splash2.png'),
                   )),
                 ],
               ),
@@ -50,22 +52,24 @@ class MyApp extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                       child: Container(
-                        width: 150.0,
-                        height: 150.0,
-                        decoration: BoxDecoration(
-                            border: Border.all(width: 10.0, color: Colors.blueGrey),
-                            borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                        margin: EdgeInsets.all(4.0),
-                      )),
+                    width: 150.0,
+                    height: 150.0,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 10.0, color: Colors.blueGrey),
+                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                    margin: EdgeInsets.all(4.0),
+                    child: Image.asset('images/splash3.png'),
+                  )),
                   Expanded(
                       child: Container(
-                        width: 150.0,
-                        height: 150.0,
-                        decoration: BoxDecoration(
-                            border: Border.all(width: 10.0, color: Colors.blueGrey),
-                            borderRadius: BorderRadius.all(Radius.circular(8.0))),
-                        margin: EdgeInsets.all(4.0),
-                      )),
+                    width: 150.0,
+                    height: 150.0,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: 10.0, color: Colors.blueGrey),
+                        borderRadius: BorderRadius.all(Radius.circular(8.0))),
+                    margin: EdgeInsets.all(4.0),
+                    child: Image.asset('images/splash4.png'),
+                  )),
                 ],
               ),
             ],
