@@ -1,28 +1,15 @@
 import 'package:flutter/material.dart';
 
+class App extends StatefulWidget {
+  @override
+  _AppState createState() => _AppState();
+}
 
-class App extends StatelessWidget {
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
-
-    return MaterialApp(
-      title: 'flutter demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ), //前景色（文本、按钮等）
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to flutter'),
-        ),
-        body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
-        ),
-      ),
-    );
+    return Container();
   }
 }
+
+
