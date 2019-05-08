@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import './loading.dart';
 
-//void main() => runApp(MyApp());
 void main() {
   return runApp(MyApp());
 }
@@ -10,23 +10,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      title: 'flutter demo',
+      debugShowCheckedModeBanner: false,
+
+      title: '聊天室',
+
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.green,
+        cardColor: Colors.green,
+        scaffoldBackgroundColor: Color(0xFFebebeb)
       ), //前景色（文本、按钮等）
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to flutter'),
-        ),
-        body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
-        ),
-      ),
+
+      home: LoadingPage(),
     );
   }
 }
