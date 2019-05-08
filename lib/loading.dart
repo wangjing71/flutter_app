@@ -7,8 +7,20 @@ class LoadingPage extends StatefulWidget {
 }
 
 class _LoadingPageState extends State<LoadingPage> {
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 3),(){
+      print('Flutter即时通许App界面实现。。。');
+      Navigator.of(context).pushReplacementNamed('app');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Image.asset('images/loading.jpeg',fit: BoxFit.cover,),
+    );
   }
 }

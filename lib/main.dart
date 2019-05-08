@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './loading.dart';
+import './app.dart';
 
 void main() {
   return runApp(MyApp());
@@ -19,6 +20,10 @@ class MyApp extends StatelessWidget {
         cardColor: Colors.green,
         scaffoldBackgroundColor: Color(0xFFebebeb)
       ), //前景色（文本、按钮等）
+
+      routes: {
+        "app": (BuildContext context) => new App(),
+      },
 
       home: LoadingPage(),
     );
