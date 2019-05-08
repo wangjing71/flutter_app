@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Personal extends StatelessWidget {
+//void main() => runApp(MyApp());
+class MessagePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
