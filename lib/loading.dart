@@ -11,7 +11,7 @@ class _LoadingPageState extends State<LoadingPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 2),(){
+    Future.delayed(Duration(seconds: 1),(){
       print('Flutter即时通许App界面实现。。。');
       Navigator.of(context).pushReplacementNamed('app');
     });
