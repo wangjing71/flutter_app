@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 
       routes: {
         "app": (BuildContext context) => new App(),
-        "search": (BuildContext context) => new Search(),
+        "search": (BuildContext context) => new MyHomePage(),
       },
 
       home: LoadingPage(),
