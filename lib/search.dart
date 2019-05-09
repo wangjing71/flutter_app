@@ -15,8 +15,6 @@ class _SearchState extends State<Search> {
       ), //前景色（文本、按钮等）
       home: Scaffold(
         appBar: AppBar(
-          brightness: Brightness.light,
-          backgroundColor: Colors.transparent, //把appbar的背景色改成透明
           title: Text('Welcome to flutter'),
         ),
         body: Center(
