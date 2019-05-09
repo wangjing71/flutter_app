@@ -43,42 +43,10 @@ class _AppState extends State<App> {
     }
   }
 
-  //渲染某个菜单项 传入菜单标题 图片路径或图标
-  _popupMenuItem(String title, {String imagePath, IconData icon}) {
-    return PopupMenuItem(
-      child: Row(
-        children: <Widget>[
-          //判断是使用图片路径还是图标
-          imagePath != null
-              ? Image.asset(
-                  imagePath,
-                  width: 32.0,
-                  height: 32.0,
-                )
-              : SizedBox(
-                  width: 32.0,
-                  height: 32.0,
-                  child: Icon(
-                    icon,
-                    color: Colors.white,
-                  ),
-                ),
-          //显示菜单项文本内容
-          Container(
-            padding: const EdgeInsets.only(left: 20.0),
-            child: Text(
-              title,
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         //当前页面索引
