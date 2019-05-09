@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './loading.dart';
 import './app.dart';
+import 'package:flutter_app/search.dart';
 
 void main() {
   return runApp(MyApp());
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
 
       routes: {
         "app": (BuildContext context) => new App(),
+        "search": (BuildContext context) => new Search(),
       },
 
       home: LoadingPage(),
