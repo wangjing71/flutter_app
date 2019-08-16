@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             onPressed: (){
               
             },
-            child: new Text('点击了按钮1'),
+            child: new Text('点击了按钮'),
           )
         ),
       ),
