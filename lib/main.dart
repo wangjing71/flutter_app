@@ -16,14 +16,14 @@ class MyApp extends StatelessWidget {
       ), //前景色（文本、按钮等）
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to flutter'),
+          title: Text('Flutter 示例'),
         ),
         body: Center(
           child: new RaisedButton(
             onPressed: (){
               
             },
-            child: new Text('点击了按钮'),
+            child: new Text('点击了按钮1'),
           )
         ),
       ),
