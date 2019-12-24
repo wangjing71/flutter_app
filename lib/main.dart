@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       ), //前景色（文本、按钮等）
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Flutter 示例'),
+          title: Text('我是标题'),
         ),
         body: Center(
           child: new RaisedButton(
