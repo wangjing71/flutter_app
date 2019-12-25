@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_app/NewRoute.dart';
 import 'package:flutter_app/TipRoute.dart';
 
@@ -6,104 +9,66 @@ import 'RandomWordsWidget.dart';
 
 void main() => runApp(new MyApp());
 
-class NewRoute extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("new route"),
-      ),
-
-      body: Center(
-
-        child: Text("this is new route"),
-      ),
-    );
-  }
-}
-
-
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Flutter Demo',
-      theme: new ThemeData(
+
+    if (Platform.isAndroid) {
+      // 以下两行 设置android状态栏为透明的沉浸。写在组件渲染之后，是为了在渲染后进行set赋值，覆盖状态栏，写在渲染之前MaterialApp组件会覆盖掉这个值。
+      SystemUiOverlayStyle systemUiOverlayStyle =
+      SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+      SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+    }
+
+    return MaterialApp(
+      title: 'flutter demo',
+      theme: ThemeData(
         primarySwatch: Colors.blue,
-      ),
-      initialRoute: "/",
-      routes: {
-        "new_page":(context) => NewRoute(),
-        "/":(context) => MyHomePage(title: 'Flutter示例'), //注册首页路由
-        "chuancan":(context) => TipRoute(textStr: ModalRoute.of(context).settings.arguments),
-      },
-    );
-  }
-}
+      ), //前景色（文本、按钮等）
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('我是标题'),
+        ),
+        body: new Center(
+          child: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              FlatButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, "new_page");
+                  //Navigator.push(context,
+                  //  MaterialPageRoute(builder: (context) {
+                  //  return NewRoute();
+                  //}));
+                },
+                textColor: Colors.blue,
+                child: Text("打开新的路由"),
+              ),
+              FlatButton(
+                onPressed: () async {
+                  var result = await Navigator.push(context, MaterialPageRoute(builder: (context){
+                    return TipRoute(
+                      textStr: "我是上个界面传过来的数据1",
+                    );
+                  }));
+                  print("路由返回值: $result");
+                },
+                textColor: Colors.blue,
+                child: Text("打开页面 带参数"),
+              ),
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
-      ),
-      body: new Center(
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            FlatButton(
-              onPressed: (){
-                Navigator.pushNamed(context, "new_page");
-                //Navigator.push(context,
-                //  MaterialPageRoute(builder: (context) {
-                //  return NewRoute();
-                //}));
-              },
-              textColor: Colors.blue,
-              child: Text("打开新的路由"),
-            ),
-            FlatButton(
-              onPressed: () async {
-                var result = await Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return TipRoute(
-                    textStr: "我是上个界面传过来的数据1",
-                  );
-                }));
-                print("路由返回值: $result");
-              },
-              textColor: Colors.blue,
-              child: Text("打开页面 带参数"),
-            ),
-
-            FlatButton(
-              onPressed: (){
-                Navigator.push(context,
-                  MaterialPageRoute(builder: (context) {
-                  return RandomWordsWidget();
-                }));
-              },
-              textColor: Colors.blue,
-              child: Text("随机数"),
-            ),
-          ],
+              FlatButton(
+                onPressed: (){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) {
+                        return RandomWordsWidget();
+                      }));
+                },
+                textColor: Colors.blue,
+                child: Text("随机数"),
+              ),
+            ],
+          ),
         ),
       ),
     );
