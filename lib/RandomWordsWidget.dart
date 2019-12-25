@@ -7,7 +7,7 @@ class RandomWordsWidget extends StatelessWidget {
     // 生成随机字符串
     final wordPair = new WordPair.random();
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(80.0),
       child: new Text(wordPair.toString()),
     );
   }
