@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/NewRoute.dart';
 import 'package:flutter_app/TipRoute.dart';
 
+import 'RandomWordsWidget.dart';
+
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -78,7 +80,18 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               textColor: Colors.blue,
               child: Text("打开页面 带参数"),
-            )
+            ),
+
+            FlatButton(
+              onPressed: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) {
+                  return RandomWordsWidget();
+                }));
+              },
+              textColor: Colors.blue,
+              child: Text("随机数"),
+            ),
           ],
         ),
       ),
