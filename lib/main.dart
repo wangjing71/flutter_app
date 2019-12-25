@@ -6,6 +6,24 @@ import 'RandomWordsWidget.dart';
 
 void main() => runApp(new MyApp());
 
+class NewRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("new route"),
+      ),
+
+      body: Center(
+
+        child: Text("this is new route"),
+      ),
+    );
+  }
+}
+
+
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -17,7 +35,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "new_page":(context) => NewRoute(),
-        "/":(context) => MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
+        "/":(context) => MyHomePage(title: 'Flutter示例'), //注册首页路由
         "chuancan":(context) => TipRoute(textStr: ModalRoute.of(context).settings.arguments),
       },
     );
@@ -51,13 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text(
-              'You have pushed the button this many times:',
-            ),
-            new Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
             FlatButton(
               onPressed: (){
                 Navigator.pushNamed(context, "new_page");
@@ -95,11 +106,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: '汪京',
-        child: new Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
