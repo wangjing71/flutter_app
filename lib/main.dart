@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/NewRoute.dart';
 import 'package:flutter_app/TipRoute.dart';
 
-import 'RandomWordsWidget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -10,14 +9,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter学习',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
       initialRoute: "/",
       routes: {
         "new_page":(context) => NewRoute(),
-        "/":(context) => MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
+        "/":(context) => MyHomePage(title: 'Flutter学习'), //注册首页路由
         "chuancan":(context) => TipRoute(textStr: ModalRoute.of(context).settings.arguments),
       },
     );
@@ -51,13 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text(
-              'You have pushed the button this many times:',
-            ),
-            new Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
             FlatButton(
               onPressed: (){
                 Navigator.pushNamed(context, "new_page");
@@ -73,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () async {
                 var result = await Navigator.push(context, MaterialPageRoute(builder: (context){
                   return TipRoute(
-                    textStr: "我是上个界面传过来的数据1",
+                    textStr: "我是上个界面传过来的数据2",
                   );
                 }));
                 print("路由返回值: $result");
@@ -82,24 +74,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("打开页面 带参数"),
             ),
 
-            FlatButton(
-              onPressed: (){
-                Navigator.push(context,
-                  MaterialPageRoute(builder: (context) {
-                  return RandomWordsWidget();
-                }));
-              },
-              textColor: Colors.blue,
-              child: Text("随机数"),
-            ),
           ],
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: '汪京',
-        child: new Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
