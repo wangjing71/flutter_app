@@ -2,10 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/NewRoute.dart';
 import 'package:flutter_app/TipRoute.dart';
 
-import 'RandomWordsWidget.dart';
 
 void main() => runApp(new MyApp());
 
@@ -35,37 +33,13 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                 onPressed: (){
-                  Navigator.pushNamed(context, "new_page");
-                  //Navigator.push(context,
-                  //  MaterialPageRoute(builder: (context) {
-                  //  return NewRoute();
-                  //}));
-                },
-                textColor: Colors.blue,
-                child: Text("打开新的路由"),
-              ),
-              FlatButton(
-                onPressed: () async {
-                  var result = await Navigator.push(context, MaterialPageRoute(builder: (context){
-                    return TipRoute(
-                      textStr: "我是上个界面传过来的数据1",
-                    );
-                  }));
-                  print("路由返回值: $result");
-                },
-                textColor: Colors.blue,
-                child: Text("打开页面 带参数"),
-              ),
-
-              FlatButton(
-                onPressed: (){
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) {
-                        return RandomWordsWidget();
+                        return TipRoute(textStr: "我是参数",);
                       }));
                 },
                 textColor: Colors.blue,
-                child: Text("随机数"),
+                child: Text("打开新的路由"),
               ),
             ],
           ),
