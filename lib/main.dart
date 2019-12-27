@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 //void main() => runApp(MyApp());
 void main() {
@@ -8,6 +11,11 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    if (Platform.isAndroid) {
+      SystemUiOverlayStyle systemUiOverlayStyle =
+          SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+      SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+    }
 
     return MaterialApp(
       title: 'flutter demo',
@@ -19,13 +27,10 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter 示例'),
         ),
         body: Center(
-          child: new RaisedButton(
-            onPressed: (){
-              
-            },
-            child: new Text('点击了按钮'),
-          )
-        ),
+            child: new RaisedButton(
+          onPressed: () {},
+          child: new Text('点击了按钮'),
+        )),
       ),
     );
   }
