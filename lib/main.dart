@@ -40,59 +40,8 @@ class MyApp extends StatelessWidget {
               "Hello Word",
               textAlign: TextAlign.center,
             ),
-            RaisedButton(
-              child: Text("RaisedButton"),
-              onPressed: () {},
-            ),
-            FlatButton(
-              child: Text("FlatButton"),
-              onPressed: () {},
-            ),
-            OutlineButton(
-              child: Text("OutlineButton"),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.thumb_up),
-              onPressed: () {},
-            ),
-            RaisedButton.icon(
-              icon: Icon(Icons.send),
-              label: Text("发送"),
-              onPressed: () {},
-            ),
-            OutlineButton.icon(
-              icon: Icon(Icons.add),
-              label: Text("添加"),
-              onPressed: () {},
-            ),
-            FlatButton.icon(
-              icon: Icon(Icons.info),
-              label: Text("详情"),
-              onPressed: () {},
-            ),
 
-            PopupMenuButton<ConferenceItem>(
-              onSelected: (ConferenceItem result) {},
-              itemBuilder: (BuildContext context) => [
-                const PopupMenuItem(
-                  child: Text('添加成员'),
-                  value: ConferenceItem.AddMember,
-                ),
-                const PopupMenuItem(
-                  child: Text('锁定会议'),
-                  value: ConferenceItem.LockConference,
-                ),
-                const PopupMenuItem(
-                  child: Text('修改布局'),
-                  value: ConferenceItem.ModifyLayout,
-                ),
-                const PopupMenuItem(
-                  child: Text('挂断所有'),
-                  value: ConferenceItem.TurnonAll,
-                ),
-              ],
-            ),
+
           ],
         )),
       ),
