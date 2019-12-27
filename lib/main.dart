@@ -77,3 +77,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+enum ConferenceItem { AddMember, LockConference, ModifyLayout, TurnonAll }
