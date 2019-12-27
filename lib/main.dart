@@ -71,7 +71,6 @@ class MyApp extends StatelessWidget {
               label: Text("详情"),
               onPressed: () {},
             ),
-
             PopupMenuButton<ConferenceItem>(
               onSelected: (ConferenceItem result) {},
               itemBuilder: (BuildContext context) => [
@@ -93,6 +92,43 @@ class MyApp extends StatelessWidget {
                 ),
               ],
             ),
+            FlatButton(
+              color: Colors.blue,
+              highlightColor: Colors.blue[700],
+              colorBrightness: Brightness.dark,
+              splashColor: Colors.grey,
+              child: Text(
+                "Submit",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18.0,
+                  height: 1.2,
+                ),
+              ),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0)),
+              onPressed: () {},
+            ),
+            Container(
+                height: 40,
+                width: 180,
+                child: FlatButton(
+                  color: Colors.blue,
+                  highlightColor: Colors.blue[700],
+                  colorBrightness: Brightness.dark,
+                  splashColor: Colors.grey,
+                  child: Text(
+                    "Submit",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                      height: 1.2,
+                    ),
+                  ),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0)),
+                  onPressed: () {},
+                ))
           ],
         )),
       ),
