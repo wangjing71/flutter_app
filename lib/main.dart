@@ -44,17 +44,33 @@ class MyApp extends StatelessWidget {
               child: Text("RaisedButton"),
               onPressed: () {},
             ),
-
             FlatButton(
               child: Text("FlatButton"),
               onPressed: () {},
             ),
-
             OutlineButton(
               child: Text("OutlineButton"),
               onPressed: () {},
             ),
-
+            IconButton(
+              icon: Icon(Icons.thumb_up),
+              onPressed: () {},
+            ),
+            RaisedButton.icon(
+              icon: Icon(Icons.send),
+              label: Text("发送"),
+              onPressed: () {},
+            ),
+            OutlineButton.icon(
+              icon: Icon(Icons.add),
+              label: Text("添加"),
+              onPressed: () {},
+            ),
+            FlatButton.icon(
+              icon: Icon(Icons.info),
+              label: Text("详情"),
+              onPressed: () {},
+            ),
           ],
         )),
       ),
