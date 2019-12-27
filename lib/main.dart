@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
             child: Column(
           children: <Widget>[
             Text(
-              "Hello Word1",
+              "Hello Word",
               textAlign: TextAlign.center,
             ),
             RaisedButton(
