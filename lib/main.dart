@@ -40,6 +40,26 @@ class MyApp extends StatelessWidget {
               "Hello Word",
               textAlign: TextAlign.center,
             ),
+            Image(image: AssetImage("images/avatar.jpg"), width: 200.0),
+            Image(
+              image: NetworkImage(
+                  "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4"),
+              width: 100.0,
+            ),
+            Image.network(
+              "http://file02.16sucai.com/d/file/2014/0704/e53c868ee9e8e7b28c424b56afe2066d.jpg",
+              width: 400,
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Icon(Icons.accessible,color: Colors.green,),
+                Icon(Icons.error,color: Colors.green,),
+                Icon(Icons.fingerprint,color: Colors.red,),
+              ],
+            )
+
 
 
           ],
@@ -49,4 +69,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-enum ConferenceItem { AddMember, LockConference, ModifyLayout, TurnonAll }
