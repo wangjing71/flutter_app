@@ -112,7 +112,7 @@ class MyApp extends StatelessWidget {
             Container(
                 height: 40,
                 width: 180,
-                child: FlatButton(
+                child: RaisedButton(
                   color: Colors.blue,
                   highlightColor: Colors.blue[700],
                   colorBrightness: Brightness.dark,
