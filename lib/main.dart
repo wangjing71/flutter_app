@@ -41,9 +41,20 @@ class MyApp extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             RaisedButton(
-              child: Text("normal"),
+              child: Text("RaisedButton"),
               onPressed: () {},
             ),
+
+            FlatButton(
+              child: Text("FlatButton"),
+              onPressed: () {},
+            ),
+
+            OutlineButton(
+              child: Text("OutlineButton"),
+              onPressed: () {},
+            ),
+
           ],
         )),
       ),
