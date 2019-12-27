@@ -1,52 +1,43 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 //void main() => runApp(MyApp());
 void main() {
-  return runApp(MyApp());
+  return runApp(SwitchAndCheckBoxTestRoute());
 }
 
-class MyApp extends StatelessWidget {
+class SwitchAndCheckBoxTestRoute extends StatefulWidget {
+  @override
+  _SwitchAndCheckBoxTestRouteState createState() => new _SwitchAndCheckBoxTestRouteState();
+}
+
+class _SwitchAndCheckBoxTestRouteState extends State<SwitchAndCheckBoxTestRoute> {
+  bool _switchSelected=true; //维护单选开关状态
+  bool _checkboxSelected=true;//维护复选框状态
   @override
   Widget build(BuildContext context) {
-    if (Platform.isAndroid) {
-      SystemUiOverlayStyle systemUiOverlayStyle =
-          SystemUiOverlayStyle(statusBarColor: Colors.transparent);
-      SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
-    }
-
-    if (Platform.isAndroid) {
-      // 以下两行 设置android状态栏为透明的沉浸。写在组件渲染之后，是为了在渲染后进行set赋值，覆盖状态栏，写在渲染之前MaterialApp组件会覆盖掉这个值。
-      SystemUiOverlayStyle systemUiOverlayStyle =
-          SystemUiOverlayStyle(statusBarColor: Colors.transparent);
-      SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
-    }
-
-    return MaterialApp(
-      title: 'flutter demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ), //前景色（文本、按钮等）
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('我是标题'),
+    return Column(
+      children: <Widget>[
+        Switch(
+          value: _switchSelected,//当前状态
+          onChanged:(value){
+            //重新构建页面
+            setState(() {
+              _switchSelected=value;
+            });
+          },
         ),
-        body: Center(
-            child: Column(
-          children: <Widget>[
-            Text(
-              "Hello Word",
-              textAlign: TextAlign.center,
-            ),
-
-
-          ],
-        )),
-      ),
+        Checkbox(
+          value: _checkboxSelected,
+          activeColor: Colors.red, //选中时的颜色
+          onChanged:(value){
+            setState(() {
+              _checkboxSelected=value;
+            });
+          } ,
+        )
+      ],
     );
   }
 }
-
-enum ConferenceItem { AddMember, LockConference, ModifyLayout, TurnonAll }
