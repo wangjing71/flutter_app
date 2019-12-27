@@ -71,6 +71,28 @@ class MyApp extends StatelessWidget {
               label: Text("详情"),
               onPressed: () {},
             ),
+
+            PopupMenuButton<ConferenceItem>(
+              onSelected: (ConferenceItem result) {},
+              itemBuilder: (BuildContext context) => [
+                const PopupMenuItem(
+                  child: Text('添加成员'),
+                  value: ConferenceItem.AddMember,
+                ),
+                const PopupMenuItem(
+                  child: Text('锁定会议'),
+                  value: ConferenceItem.LockConference,
+                ),
+                const PopupMenuItem(
+                  child: Text('修改布局'),
+                  value: ConferenceItem.ModifyLayout,
+                ),
+                const PopupMenuItem(
+                  child: Text('挂断所有'),
+                  value: ConferenceItem.TurnonAll,
+                ),
+              ],
+            ),
           ],
         )),
       ),
